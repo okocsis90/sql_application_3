@@ -15,6 +15,5 @@ How should you generate an SQL big like this? :-) Our advices is just one word: 
 */
 BEGIN;
 TRUNCATE TABLE mentor_candidates;
-COPY mentor_candidates(first_name, last_name, phone_number, email, city, level, birth_year)
-FROM '/home/okocsis90/codecool/8th_si_week/sql_remote_repo/sql_application_3/mentor_candidates.csv' DELIMITER ',' CSV;
+\COPY mentor_candidates FROM 'mentor_candidates.csv' DELIMITER ',' CSV;
 COMMIT;
